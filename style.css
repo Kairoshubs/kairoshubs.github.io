@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Lucida Bright";
+  src: url("https://assets.codepen.io/6060109/adihaus_regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lucida Bright";
+  src: url("https://assets.codepen.io/6060109/adihaus_bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --theme-color-black: #333333; /* rgba(51, 51, 51, 1) */
+  --theme-color-brown: #5bc8a7;
+  --theme-color-red: #276955;
+  --theme-color-white: azure; /* rgba(254, 255, 255, 1) */
+}
+
+/* ---------- MAIN BODY DECLERATIONS ---------- */
+
+html,
+body {
+  background-color: var(--theme-color-white);
+  font-family: "Lucida Bright";
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  font-family: "Lucida Bright";
+}
+
+.mobile-container {
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.hero-image-desktop {
+  display: none;
+}
+
+/* ---------- HERO BANNER DECLERATIONS ---------- */
+.hero-banner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-banner .logo-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: auto;
+}
+
+.logo-wrapper img {
+  display: block;
+  height: 2.5rem;
+  margin-top: 20px;
+  width: auto;
+}
+
+.hero-banner .hero-image {
+  background-image: url(https://img.freepik.com/free-photo/african-woman-sitting-computer-science-class-lady-glasses-smiles-camera-female-student-sitting-computer_1157-42322.jpg?t=st=1647991029~exp=1647991629~hmac=f6a7986668ed1bc33d2a22cd16ccb1eb37fae467a5dcd2f5e5cdf715a6a92be7&w=740);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 376px;
+  width: 100%;
+}
+
+/* ---------- TEXT INFO DECLERATIONS ---------- */
+.text-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.text-info > * {
+  padding: 0 2.5rem 0.8rem;
+}
+
+/* intended for the first h2 within .text-info */
+.text-info h2:nth-child(1) {
+  color: var(--theme-color-red);
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.text-info h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--theme-color-brown);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.text-info p {
+  color: var(--theme-color-black);
+  line-height: 24px;
+}
+
+.text-info .email-signup {
+  margin: 1rem 0 6rem;
+  position: relative;
+  width: 100%;
+}
+
+.email-signup .email-input {
+  border: 1px solid rgba(51, 51, 51, 0.7);
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.email-signup .email-input:focus {
+  background-color: white;
+  outline: 2px solid white;
+  opacity: 1;
+}
+
+.email-signup .email-submit {
+  background-color: #276955;
+  border-bottom: 1px solid var(--theme-color-black);
+  border-radius: 2px;
+  color: var(--theme-color-white);
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 1;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  right: 0;
+  margin-right: 2.5rem;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 3.5rem;
+  }
+
+  .mobile-container {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .hero-banner .logo-wrapper {
+    margin-left: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+  .logo-wrapper img {
+    margin: 0 0 0;
+    padding-left: 2.5rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .text-info {
+    text-align: left;
+    align-items: start;
+  }
+  .logo-wrapper h2 {
+    color: #276955;
+    font-size: 4rem;
+  }
+  .text-info h2 {
+    font-size: 4rem;
+  }
+  .text-info h5 {
+    font-size: 1.2rem;
+  }
+  .text-info p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .text-info input {
+    font-size: 16px;
+  }
+
+  .text-info .email-signup {
+    margin: 1rem 0 7rem;
+  }
+
+  .hero-image-desktop {
+    display: block;
+    height: 100%;
+    width: 55vw;
+  }
+
+  .hero-image-desktop img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .email-signup .email-submit {
+    border-bottom: 2px solid var(--theme-color-black);
+  }
+}
